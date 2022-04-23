@@ -110,8 +110,7 @@ body{
 
 .details-menu-element{
     display: flex;
-    
-    /*display: flex;*/ 
+
 }
 .details-menu-element:hover a{
     color: var(--pink);
@@ -168,22 +167,23 @@ a{
     width: 100%;
    height: 100%;
    background-color:rgba(11, 11, 26, 0.81);
-   position: absolute;
    top: 0;
    justify-content: center;
    align-items: center;
-   display: flex;
-   /*display: none;*/
+  /* display: flex; */ 
+  display: flex;
+   position: absolute;
+   
 
 }
 .modal-content{
     width: 60%;
     height: 70%;
     background-color:var(--dark);
-    display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
+    display: flex;
 }
 .form-element{
     padding: 1em;
