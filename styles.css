@@ -173,8 +173,6 @@ a{
   /* display: flex; */ 
   display: flex;
    position: absolute;
-   
-
 }
 .modal-content{
     width: 60%;
