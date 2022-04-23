@@ -170,10 +170,10 @@ a{
    background-color:rgba(11, 11, 26, 0.81);
    position: absolute;
    top: 0;
-   display: flex;
    justify-content: center;
    align-items: center;
-   display: none;
+   display: flex;
+   /*display: none;*/
 
 }
 .modal-content{
@@ -203,6 +203,7 @@ input{
     border: 1px solid var(--orange);
     font-size: 1em;
     font-weight: 400;
+    color: var(--lighty);
 
 }
 .close{

@@ -3,4 +3,4 @@ document.getElementById('.button').addEventListener('click',function(){
 });
 document.querySelector('.close').addEventListener('click',function(){
     document.querySelector('.registrations-modal').style.display='none';
-})
+});
