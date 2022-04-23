@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+
+:root{
+    --orange: rgb(248, 188, 8);
+    --pink : rgb(231, 133, 190);
+    --backgroud : rgb(31, 26, 59);
+    --dark: rgba(0, 0, 0, 0.934);
+    --grey:#808080;
+    --main-font:'Mitr',sans-serif;
+    --secondary-font:'Barlow',sans-serif;
+    --lighty:#fff;
+    --side-padding:8%;
+}
+*{
+    box-sizing: border-box; 
+    font-family: var(--secondary-font);
+}
+
+/*------------SCROLL BAR -------------*/
+::-webkit-scrollbar{
+    width: 1em;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--dark);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--orange);
+    height: 6.5em;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--pink);
+}
+html{
+
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background:var(--backgroud);
+    color: var(--grey);
+    font-family: var(--secondary-font); 
+    /*width: 100%;*/
+
+}
+.main-nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 var(--side-padding);
+    width: 100%;
+    /*position: absolute;*/
+    /*left: 0;
+    top: 0;*/
+
+}
+.main-nav.fixed{
+    position: fixed;
+    background-color: var(--dark);
+}
+
+.nav-mc-logo{
+   height: 4em;
+   width: 5em;
+   display: flex;
+   align-items: center;
+}
+.main-nav-elements{
+    display: flex;
+    margin: 0 0 0 auto ;
+    font-weight: 700;
+    list-style: none;
+}
+.main-nav-element{
+   margin: auto 0.5em; 
+}
+.main-nav-element:first-child > a{
+    color: var(--orange);
+}
+.main-nav-element a{
+    padding: 1em;
+}
+.main-nav-element > a{
+    color: var(--lighty);
+    text-decoration: none;  
+}
+.main-nav-element:hover > a{
+    color: var(--pink);
+}
+.details-menu{
+    position: relative; /*positionner element en dessous*/
+    
+}
+.details-menu:hover .details-menu-elements{
+    visibility: visible;
+
+}
+.details-menu-elements{
+    list-style: none; 
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 2em;
+    padding: 0;
+    background-color: var(--lighty);
+}
+.details-menu-elements a{
+    padding: 1em;
+    color: var(--dark)/* we can add !important;*/
+}
+
+.details-menu-element{
+    display: flex;
+    
+    /*display: flex;*/ 
+}
+.details-menu-element:hover a{
+    color: var(--pink);
+}
+
+
+.button,.button.secondary:hover {
+    font-weight: 700;
+    background-color: var(--orange);
+    color: var(--dark); 
+    font-size: 1em;
+    padding: 1em;
+    margin: auto 0;
+    border: 1px solid var(--orange);
+    text-decoration:uppercase;
+} 
+.button.secondary,.button:hover{
+    background-color: transparent;
+    color: var(--orange);
+ 
+    
+}
+section{
+    padding: 5em var(--side-padding);
+
+
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--main-font);
+    color: var(--lighty);
+    line-height: 1.3em;
+}
+h1{
+    font-size: 5rem;
+    width: 10ch;
+}
+h2{
+    font-size: 2.7em;
+}
+h4{
+    font-size: 2.7em;
+    color: var(--pink);
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+    color: var(--lighty);
+}
+
+
+/*-------REGISTRATION FORM------------*/
+.registrations-modal{
+    width: 100%;
+   height: 100%;
+   background-color:rgba(11, 11, 26, 0.81);
+   position: absolute;
+   top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+
+}
+.modal-content{
+    width: 60%;
+    height: 70%;
+    background-color:var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.form-element{
+    padding: 1em;
+    flex: 0 0 auto;
+ }
+ .button.complete-register{
+  width: 100%;
+ }
+label{
+    color: var(--lighty);
+    font-size: 1.2em;
+    padding: 1em;
+    margin: auto 0;
+}
+input{
+    background-color: transparent;
+    border: 1px solid var(--orange);
+    font-size: 1em;
+    font-weight: 400;
+
+}
+.close{
+    top: 0;
+    color: var(--orange);
+    font-size: 2em;
+    font-weight: 900;
+    margin-left: 26em;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+#Home{
+    background:url(images/background.jpg);
+    height: 100vh;
+    
+}
+.event-infos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
