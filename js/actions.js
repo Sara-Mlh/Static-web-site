@@ -1,7 +1,7 @@
-document.getElementById('.button').addEventListener('click',function(){
-    document.querySelector('.registrations-modal').style.display='flex';
+document.getElementById("register-button").addEventListener("click", function(){
+    document.querySelector(".registrations-modal").style.display="flex";
 });
 
-document.querySelector('.close').addEventListener('click',function(){
-    document.querySelector('.registrations-modal').style.display='none';
+document.querySelector(".close").addEventListener("click", function(){
+    document.querySelector(".registrations-modal").style.display="none";
 });

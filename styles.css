@@ -4,7 +4,7 @@
 :root{
     --orange: rgb(248, 188, 8);
     --pink : rgb(231, 133, 190);
-    --backgroud : rgb(31, 26, 59);
+    --backgroud : rgb(16, 13, 32);
     --dark: rgba(0, 0, 0, 0.934);
     --grey:#808080;
     --main-font:'Mitr',sans-serif;
@@ -48,7 +48,8 @@ body{
     flex-wrap: wrap;
     padding: 0 var(--side-padding);
     width: 100%;
-    /*position: absolute;*/
+    z-index: 200;
+   /*position: absolute;*/
     /*left: 0;
     top: 0;*/
 
@@ -135,21 +136,28 @@ body{
 }
 section{
     padding: 5em var(--side-padding);
-
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
 
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6,.h2-span{
     font-family: var(--main-font);
     color: var(--lighty);
-    line-height: 1.3em;
+    line-height: 1.1em;
+    margin: 0;
 }
 h1{
     font-size: 5rem;
-    width: 10ch;
+    width: 8.2ch;
+}
+h1::first-line,h2 span{
+    color: var(--orange);
 }
 h2{
     font-size: 2.7em;
+    font-weight: 600;
 }
 h4{
     font-size: 2.7em;
@@ -160,9 +168,12 @@ a{
     text-decoration: none;
     color: var(--lighty);
 }
+p{
+    font-size: 1.2em;
+}
 
 
-/*-------REGISTRATION FORM------------*/
+/*-----------REGISTRATION FORM------------*/
 .registrations-modal{
     width: 100%;
    height: 100%;
@@ -170,9 +181,9 @@ a{
    top: 0;
    justify-content: center;
    align-items: center;
-  /* display: flex; */ 
-  display: flex;
+  /* display: flex; */
    position: absolute;
+  display:none;
 }
 .modal-content{
     width: 60%;
@@ -217,15 +228,98 @@ input{
 
 
 
+/*------------HOME------------*/
 
-
-#Home{
+#HOME{
     background:url(images/background.jpg);
     height: 100vh;
-    
+    background-size: cover;
+    display: flex;
 }
-.event-infos{
+#HOME::before{
+    content: " ";/* important */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background : linear-gradient(to bottom, rgba(11, 0, 22, 0.6) 0%, rgba(11, 0, 22, 0.7) 65%, rgba(11, 0, 22, 1) 100%);
+}
+
+#HOME >section{
+   z-index: 100; 
+   justify-content: center;
+}
+#HOME .event-infos{
+    padding: 1 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    /*width: 100%;*/
+    
+}
+#HOME h1{
+    margin-top: 1em;
+}
+#HOME .event-infos a{
+    margin-top: 0.5em;  
+}
+/*------------ABOUT------------*/
+#ABOUT{
+    flex-direction: row;
+    align-items: center;
+
+}  
+#ABOUT .about-div{
+    width: 50%;
+}
+#ABOUT h2{
+    width:9ch;
+    margin-bottom: 0.5em;
+} 
+#ABOUT .button{
+    padding: 1em 2em;
+}
+.about-div p{
+    font-weight: 500;
+} 
+.about-counters-container{
+    display: flex;
+    justify-content: space-between;
+}      
+.about-container{
+    margin-top: 0.5em;
+}   
+.about-container p{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+/*------------SPEAKERS------------*/
+.speakers-main-div{
+   /* width: 100%;*/
+    display: flex;
+    justify-content: space-between;
+}
+.speakers-list{
+   /* display: flex;*/
+}
+
+/*------------DETAILS------------*/
+#DETAILS{
+    flex-direction: row;
+    justify-content: space-between;
+}
+.celeb-design-image{
+    width: 60%;
+}
+.details-text{
+    justify-content: space-between;
+    width: 31%;
+}
+.h2-span{
+    color: var(--orange)!important;
+}
+/*------------SPONSORS------------*/
+.sponsors{
+    background-color: var(--pink);
 }
